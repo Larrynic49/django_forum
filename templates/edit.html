@@ -1,11 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
+{% extends "base.html" %} {% block content %} {% load static %}
+
+<section class="content">
+  <section class="post_form">Django Forum
+    <form action="/edit/{{ post.id}}/" method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      <input type="text" name="name" placeholder="Enter your name" required value="{{post.name}}"/> <br>
+      <textarea name="body" placeholder="{{post.body}}" required ></textarea> <br>
+      <input type="file" name="image"><br>
+      <input type="submit" value="Update" />
+    </form>
+  </section>
+  <section class="posts">
+    <ul>
+
+      <li>
+      
+        <div class="logo">
+
+            <img src="{% static 'img/user.png' %}" />
+
+        </div>
+        
+        <div class="name_body">
+          <div class="name">{{ post.name }}</div>
+          <div class="datetime">{{ post.created_at}}</div>
+          <p>{{ post.body }}</p>
+         {%if post.image%}
+           <img src="{{post.image.url}}" alt="Post-Image" width="100%" style="object-fit: contain;margin: 0 auto;">
+          {%endif%}
+          <p><a href="/like/{{post.id}}/" style="text-decoration: none;">❤️</a> {{post.likes}}</p>
+
+        </div>
+      </li>
+    </ul>
+  </section>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  <script src="{% static 'js/post.js' %}"></script> 
+
+  </section>
+
+{% endblock %}
