@@ -1,5 +1,9 @@
 from django.db import models
 from django.forms import DateTimeField
+from cloudinary.models import CloudinaryField
+
+
+
 # Create your models here.
 class Post(models.Model):
     class Meta(object):
@@ -9,3 +13,11 @@ class Post(models.Model):
     body = models.CharField('Body', max_length=200, blank=True, null=True) 
 
     created_at = models.DateTimeField('Created DataTime', blank=True, auto_now_add = True)
+
+    image = CloudinaryField(
+        'image', blank=True,
+    )
+
+    likes = models.PositiveIntegerField(
+        'Likes', default=0, null=True, blank=True
+    )
