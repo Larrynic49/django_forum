@@ -1,18 +1,31 @@
+body{
+    background-color: black;
+}
 
-
-
-
-html,
-body {height: 100%;
+html{
+    font-family: sans-serif;
 }
 
 .content {
-    max-width: 750px;
-    height: 100%;
+    max-width:500px;
     margin: 0 auto;
-    border-left: 1px solid grey;
-    border-right: 1px solid grey;
-    
+   border: 1px solid rgb(113, 118, 123)
+}
+
+.nav h1{
+    font-size: 30px;
+}
+
+.nav{
+    padding: 10px 10px !important; 
+    color:white ;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgb(113, 118, 123)
+
+}
+.logo{
+    height: 40px;width: 40px !important;
 }
 
 /*
@@ -21,22 +34,36 @@ Post
 
 .post_form {
     padding: 20px 40px;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid rgb(113, 118, 123);
    text-align: center;
 }
 
-input {
-    width: 80%;
-    margin-bottom: 10px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    margin-right: 1%;
+input,textarea{
+    height: 25px;
+    width: 90%;
+    background-color: white ;
+    border-radius: 6px;
+    border: none;
+    margin-bottom: 5px;
+    padding: 3px 0 0 5px;
+    }
+textarea{
+    height: 100px;
+    resize: vertical;
 }
 
-textarea {
-    width: 80%;
-    padding: 10px;
-    
+
+::-webkit-file-upload-button{
+    height: 100%;
+    border: none;
+    background: lightgray;
+}
+
+input[type='submit']{
+    background-color:rgb(29, 161, 242) ;
+}
+input[type='file']{
+    padding: 0%;
 }
 
 .posts ul {
@@ -45,16 +72,17 @@ textarea {
 
 .posts li {
     display: flex;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid rgb(113, 118, 123);
     padding: 17px;
     position: relative;
+    color: white;
 }
 
 .posts li .menu_icon {
-    width: 20px;
+    width: 30px !important;
     position:absolute;
     right: 30px;
-    top: 18px;
+    top: 10px;
 }
 
 .posts li .menu {
@@ -70,6 +98,8 @@ textarea {
  
 }
 
+
+
 .posts li .menu a {
     text-decoration: none;
 }
@@ -80,7 +110,7 @@ textarea {
 }
 
 .posts li .logo img {
-    width: 60%;
+    width: 70%;
 }
 
 .posts li .name_body {
@@ -89,35 +119,17 @@ textarea {
 
 .posts  li .name {
     font-weight: bold;
+    font-size: 25px;
 }
 
 .posts li .datetime {
-    color: gray;
+    color: lightgray;
+    font-size: small;
 }
 
 
-textarea{
-    margin-left: 4px;
-    margin-top: 4px;
-    
 
-}
 
-input[type="text"]{
-    margin-top: 10px;
-    
 
-}
 
-input[type="submit"]{
-    margin-left: 11px;
-    width: 170px;
-    padding: 5px;
-}
-
-@media screen and (max-width: 500px) {
-    .posts li .name_body .name {
-        font-size: 40px;
-    }
-}
-    
+  

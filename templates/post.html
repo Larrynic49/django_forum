@@ -1,7 +1,11 @@
 {% extends "base.html" %} {% block content %} {% load static %}
 
 <section class="content">
-  <section class="post_form">Django Forum
+  <header class="nav"> 
+    <img src="https://x-clone-65o2.onrender.com/static/img/X_logo.jpeg" alt="x-img" class="logo">
+    <h1> Home</h1>
+  </header>
+  <section class="post_form">
     <form action="/" method="post" enctype="multipart/form-data">
       {% csrf_token %}
       <input type="text" name="name" placeholder="Enter your name" required /> <br>
@@ -11,10 +15,10 @@
     </form>
   </section>
   <section class="posts">
-    <ul>
+ 
       {% for post in posts %}
       <li>
-        <img class="menu_icon js-menu-icon"  src="{% static 'img/option.png' %}" />
+        <img class="menu_icon js-menu-icon"  src="https://icon-library.com/images/3-dot-icon/3-dot-icon-0.jpg" width="30px"/>
         <div class="menu">
           <a href="/delete/{{ post.id}}/">Delete</a>
           <br>
@@ -22,7 +26,7 @@
         </div>
         <div class="logo">
 
-            <img src="{% static 'img/user.png' %}" />
+            <img src="https://icons.veryicon.com/png/o/miscellaneous/two-color-webpage-small-icon/user-244.png" />
 
         </div>
         
@@ -37,7 +41,7 @@
         </div>
       </li>
       {% endfor %}
-    </ul>
+
   </section>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
