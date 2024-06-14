@@ -5,7 +5,7 @@ To make the project simple, we do not have a sign/login function.
 So there are not user accounts and follow function. You can challenge after you finish the course.
 ```
 
-Check out [LIVE DEMO](https://x-clone-65o2.onrender.com) here!!
+Check out [LIVE DEMO](https://django-forum-3ven.onrender.com) here!!
 
 
 
