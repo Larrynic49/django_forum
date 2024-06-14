@@ -12,8 +12,8 @@ Check out [LIVE DEMO](https://x-clone-65o2.onrender.com) here!!
 
 
 ## Screenshot
-(https://github.com/Larrynic49/django_forum/assets/168606797/9769b622-06c4-447f-b37a-39c5db6900c1)
-eenshot" width="400"/>
+![X CLONE IMAGE](https://github.com/Larrynic49/django_forum/assets/168606797/34e5b6b3-1c78-462b-ab34-77d4e87f3c57)
+
 
 ## Tech used
 ```
